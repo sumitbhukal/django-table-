@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <title>
+    </title>
+    <head>
+            
+    </head>
+    <body>
+        
+        <table  border = "1" cellpadding = "5" cellspacing = "5" style="border-style: solid;">
+
+        <tr>
+            <th>Employee Id</th>
+            <th>Name</th>
+            <th>Email Id</th>
+            
+        </tr>
+        {% for i in all_data %}
+               <tr>
+                   
+                   <td>{{ i.emp_id }}</td>
+                   <td>{{ i.name }}</td>
+                   <td>{{ i.email_id }} </td>
+               </tr>
+               {% endfor %}
+           </table> <br><br>
+           <form  method="GET">
+            <label for="emp_id">Employee Id:</label>
+            <input type="number" name="emp_id">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <label for="email">Email:</label>
+            <input type="email" name="email">
+            <input type="submit" value="Submit" />
+        </form>
+        
+        
+    </body>
+</html>
